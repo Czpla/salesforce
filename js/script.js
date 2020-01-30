@@ -1,4 +1,4 @@
-//cria os cartões
+//cria os cartões.
 function creatCard(title, photo, link, forks, stars, body) {
   $('#cardrow').append(
     `<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 d-flex justify-content-sm-center">
@@ -38,7 +38,7 @@ function creatCard(title, photo, link, forks, stars, body) {
   )
 }
 
-//requisição ajax para obter os dados do JSON
+//requisição ajax para obter os dados do JSON.
 $.ajax({
   url: 'https://api.github.com/search/repositories?q=language:Java&sort=stars&page=1',
   type: 'GET',
@@ -53,7 +53,7 @@ $.ajax({
   }
 })
 
-//Exibe os cartões
+//Exibe os cartões.
 function showCards(jsonObj) {
   const items = jsonObj['items']
 
